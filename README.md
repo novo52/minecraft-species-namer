@@ -1,5 +1,5 @@
-# species-namer
-Taking in a set of minecraft-related keywords, the species namer will create a species name in the style of Binomial Nomenclature
+# minecraft-species-namer
+Taking in a pair of minecraft-related keywords, the species namer will create a species name using bad latin translations
 
 # examples
 | Input          | Output           |
