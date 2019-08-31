@@ -1,5 +1,5 @@
 const objectsAndAdjectives = {slow: 'tarda', big: 'magnum', fast: 'rapidi', stone: 'lapi', grass: 'herba', dirt: 'lutu', item: 'res'}
-const subjects = {miner: 'metallicus', crafter: 'formatus', holder: 'possessor', breaker: 'ruptor', dropper: 'dejectus', }
+const subjects = {miner: 'metallicus', crafter: 'formatus', holder: 'possessor', breaker: 'ruptor', dropper: 'dejectus', hoarder: 'recondor', }
 
 let args = process.argv.slice(2);
 console.log(createSpeciesName([args]))
