@@ -1,14 +1,14 @@
-const objectsAndAdjectives = {slow: 'tarda', big: 'magnum', fast: 'rapidi', stone: 'lapi', grass: 'herba', dirt: 'lutu', item: 'res'}
-const subjects = {miner: 'metallicus', crafter: 'formatus', holder: 'possessor', breaker: 'ruptor', dropper: 'dejectus', hoarder: 'recondor', }
+const nameLists = require('./nameLists.js');
 
 let args = process.argv.slice(2);
-console.log(createSpeciesName([args]))
+console.log(createSpeciesName([args]));
 
 function createSpeciesName(names) {
   for (i in names) {
     let name = names[i];
-    let starter = objectsAndAdjectives[name[0]];
-    let ending = subjects[name[1]];
+
+    let starter = nameLists.starters[name[0]];
+    let ending = nameLists.endings[name[1]];
     let output = '' + starter + ending;
     if (typeof starter != 'undefined' && typeof ending != 'undefined') {
       return output;
@@ -16,4 +16,8 @@ function createSpeciesName(names) {
       return false;
     }
   }
+}
+
+module.exports = {
+  createSpeciesName
 }
